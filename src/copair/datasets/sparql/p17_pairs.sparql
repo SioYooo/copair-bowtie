@@ -1,0 +1,2 @@
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+SELECT ?a ?b WHERE { ?a wdt:P17 ?b . FILTER EXISTS { ?x wdt:P54 ?a } }

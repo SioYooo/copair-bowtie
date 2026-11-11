@@ -1,0 +1,2 @@
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+SELECT ?x ?a WHERE { ?x wdt:P54 ?a }

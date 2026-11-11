@@ -1,0 +1,5 @@
+__pycache__/
+*.pyc
+build/
+# decompressed Wikidata tables; the compressed ones are tracked
+data/downloads/wikidata_sports/*.tsv

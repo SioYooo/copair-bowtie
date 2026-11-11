@@ -1,0 +1,5 @@
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+SELECT ?a ?b (COUNT(?x) AS ?f) WHERE { ?a wdt:P17 ?b . ?x wdt:P54 ?a . ?x wdt:P27 ?b .
+  { SELECT ?x (COUNT(?t) AS ?dt) WHERE { ?x wdt:P54 ?t } GROUP BY ?x }
+  { SELECT ?x (COUNT(?c) AS ?dc) WHERE { ?x wdt:P27 ?c } GROUP BY ?x }
+  FILTER(?dt + ?dc <= 13) } GROUP BY ?a ?b ORDER BY DESC(?f)
